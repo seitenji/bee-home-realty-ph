@@ -1,5 +1,4 @@
-// import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import React from "react"
 
 const Footer = () => (
@@ -8,32 +7,32 @@ const Footer = () => (
       <div class="section">
         <div class="row mx-auto">
           <div class="col-sm">
-            <a href="#">
+            <Link to="/">
               <h1 class="display-4">Buy</h1>
-            </a>
+            </Link>
           </div>
           <div class="col-sm">
-            <a href="#">
+            <Link to="/">
               <h1 class="display-4">Rent</h1>
-            </a>
+            </Link>
           </div>
           <div class="col-sm text-center">
             <ul>
-              <a href="#">
+              <Link to="/">
                 <li class="mb-2">Home</li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <li class="mb-2">Buy</li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <li class="mb-2">Rent</li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <li class="mb-2">About</li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <li class="mb-2">Contact</li>
-              </a>
+              </Link>
             </ul>
           </div>
           <div class="col-sm">
@@ -41,16 +40,16 @@ const Footer = () => (
             <p>All Rights Reserve</p>
           </div>
           <div class="col-sm">
-            <a href="https://www.facebook.com/BeeHomeRealtyInc/">
+            <Link to="https://www.facebook.com/BeeHomeRealtyInc/">
               <img
                 src="images/facebook.png"
                 alt="facebook"
                 class="mx-md-4 mr-2"
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/">
               <img src="images/instagram.png" alt="instagram" class="ml-2" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

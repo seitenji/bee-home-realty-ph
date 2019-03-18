@@ -1,19 +1,23 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import { graphql, StaticQuery } from "gatsby"
 import SEO from "../components/seo"
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
+
+import {
+  faSearch,
+  faCaretDown,
+  faCheckCircle,
+} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import classNames from "classnames"
+
 import logo from "../images/img-logo.png"
+
+import classNames from "classnames"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`Real Estate`, `Listing`, `Manila`]} />
 
     {/* Showcase Section */}
     <div className={classNames("section-main", "container-fluid")}>
@@ -56,19 +60,19 @@ const IndexPage = () => (
         <h1 className={classNames("title", "text-center")}>Choose</h1>
 
         <div className={classNames("row", "mx-lg-6")}>
-          <a href="#" className="text-white col-sm">
+          <Link to="/" className="text-white col-sm">
             <div className="choice-a img-thumbnail">
               <p className="choice font-weight-bold">BUY</p>
             </div>
-          </a>
+          </Link>
           <p className="text-center mt-3 col-md-2 col-sm-1 align-self-center">
             or
           </p>
-          <a href="#" className="text-white col-sm">
+          <Link to="/" className="text-white col-sm">
             <div className="choice-b img-thumbnail col-sm">
               <p className="choice font-weight-bold text-white">RENT</p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -81,18 +85,18 @@ const IndexPage = () => (
 
         <div className="card-deck">
           <div className="card">
-            <a href="property.html">
+            <Link to="/">
               <img
                 src="https://source.unsplash.com/1600x900/?house, condo"
                 className="card-img-top"
                 alt="property"
               />
-            </a>
+            </Link>
             <div className="card-body">
-              <a className="text-dark" href="property.html">
+              <Link to="/" className="text-dark">
                 <h6 className="card-subtitle mb-2 text-muted">South Pauline</h6>
                 <h5 className="card-title">13042 Bogisich Common</h5>
-              </a>
+              </Link>
               <p className="card-text">Rooms: 2</p>
               <p className="card-text">Square meter: 150 SqM</p>
             </div>
@@ -415,9 +419,8 @@ const IndexPage = () => (
           <div class="card">
             <div class="card-body">
               <img
-                class="rounded-circle border border-info"
+                class="rounded-circle border border-info card-img-top"
                 src="images/img_holder.png"
-                class="card-img-top"
                 alt="clients"
               />
               <p class="card-text mt-4">
@@ -435,9 +438,8 @@ const IndexPage = () => (
           <div class="card">
             <div class="card-body">
               <img
-                class="rounded-circle border border-info"
+                class="rounded-circle border border-info card-img-top"
                 src="images/img_holder.png"
-                class="card-img-top"
                 alt="clients"
               />
               <p class="card-text mt-4">
@@ -455,9 +457,8 @@ const IndexPage = () => (
           <div class="card">
             <div class="card-body">
               <img
-                class="rounded-circle border border-info"
+                class="rounded-circle border border-info card-img-top"
                 src="images/img_holder.png"
-                class="card-img-top"
                 alt="clients"
               />
               <p class="card-text mt-4">

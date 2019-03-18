@@ -1,24 +1,14 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
+
+import "./layout.scss"
+import "bootstrap/dist/css/bootstrap.css"
 
 import Header from "./header"
 import SubFooter from "./subFooter"
 import Footer from "./footer"
-import "./layout.scss"
-// import "./style.css"
-import "bootstrap/dist/css/bootstrap.css"
-import Helmet from "react-helmet"
-
-import { library } from "@fortawesome/fontawesome-svg-core"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Layout = ({ children }) => (
   <StaticQuery
