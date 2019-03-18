@@ -210,7 +210,7 @@ const IndexPage = () => (
 
         <div className="card-about">
           <div className="card-about-logo">
-            <img src={logo} alt="logo" class="img-thumbnail" />
+            <img src={logo} alt="logo" className="img-thumbnail" />
           </div>
 
           <div className="card-about-text">
@@ -249,10 +249,10 @@ const IndexPage = () => (
 
     {/* Services Section */}
     <div id="services-section">
-      <div class="section">
-        <h1 class="title text-center">Services</h1>
+      <div className="section">
+        <h1 className="title text-center">Services</h1>
 
-        <p class="lead">
+        <p className="lead">
           BEE HOME REALTY, INC. is set to offer a variety of services within the
           scope of the real estate industry in the Philippines.
           <br />
@@ -260,8 +260,8 @@ const IndexPage = () => (
           Our business offering are listed below;
         </p>
 
-        <div class="row text-left services-text">
-          <div class="col-sm">
+        <div className="row text-left services-text">
+          <div className="col-sm">
             <p>
               <FontAwesomeIcon icon={faCheckCircle} className="check-circle" />{" "}
               Facilitating a Purcahse.
@@ -279,7 +279,7 @@ const IndexPage = () => (
               Property Management.
             </p>
           </div>
-          <div class="col-sm">
+          <div className="col-sm">
             <p>
               <FontAwesomeIcon icon={faCheckCircle} className="check-circle" />{" "}
               Exchanging property.
@@ -299,10 +299,10 @@ const IndexPage = () => (
           </div>
         </div>
 
-        <div class="text-center mt-md-3">
+        <div className="text-center mt-md-3">
           <button
             type="button"
-            class="mx-auto btn btn-link text-success"
+            className="mx-auto btn btn-link text-success"
             data-toggle="modal"
             data-target="#exampleModalScrollable"
           >
@@ -310,89 +310,92 @@ const IndexPage = () => (
           </button>
 
           <div
-            class="modal fade"
+            className="modal fade"
             id="exampleModalScrollable"
             tabindex="-1"
             role="dialog"
             aria-labelledby="exampleModalScrollableTitle"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalScrollableTitle">
+            <div
+              className="modal-dialog modal-dialog-scrollable"
+              role="document"
+            >
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalScrollableTitle">
                     Our product and services
                   </h5>
                   <button
                     type="button"
-                    class="close"
+                    className="close"
                     data-dismiss="modal"
                     aria-label="Close"
                   >
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body text-left">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                <div className="modal-body text-left">
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item">
                       Facilitating a purchase - guiding a buyer through the
                       process.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Facilitating a sale - guiding a seller through the selling
                       process.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Document preparation - preparing the necessary paperwork
                       for "For Sale by Owner" sellers.
                     </li>
-                    <li class="list-group-item">Property management.</li>
-                    <li class="list-group-item">Exchanging property</li>
-                    <li class="list-group-item">Auctioning property.</li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">Property management.</li>
+                    <li className="list-group-item">Exchanging property</li>
+                    <li className="list-group-item">Auctioning property.</li>
+                    <li className="list-group-item">
                       Preparing contracts and leases.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Listing the property for sale to the public.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Providing the seller with a real property condition
                       disclosure (if required by law) and other necessary forms.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Holding an open house to show the property.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Serving as a contact available to answer any question
                       about the property and schedule showing appointments.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Ensuring that buyers are pre-screened and financially
                       qualified to buy the property.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Negotiating price on behalf of the sellers.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Acts as a fiduciary for the seller, which may include
                       preparing standard real estate purchase contract.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Selling of Fully Furnished Properties, Pre-Selling and
                       Resale Properties.
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Selling of Landed Properties
                     </li>
-                    <li class="list-group-item">
+                    <li className="list-group-item">
                       Real Estate Consultancy and Advisory Services
                     </li>
                   </ul>
                 </div>
-                <div class="modal-footer">
+                <div className="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-dismiss="modal"
                   >
                     Close
@@ -408,77 +411,79 @@ const IndexPage = () => (
 
     {/* Testimonials Section */}
     <div id="testimonials-section">
-      <div class="section">
-        <h1 class="title text-center">Testimonials</h1>
-        <p class="lead">
+      <div className="section">
+        <h1 className="title text-center">Testimonials</h1>
+        <p className="lead">
           We are proud to say that our clients are satisfied and happy simply
           because we receive more referrals from them.
         </p>
 
-        <div class="card-deck text-center">
-          <div class="card">
-            <div class="card-body">
+        <div className="card-deck text-center">
+          <div className="card">
+            <div className="card-body">
               <img
-                class="rounded-circle border border-info card-img-top"
+                className="rounded-circle border border-info card-img-top"
                 src="images/img_holder.png"
                 alt="clients"
               />
-              <p class="card-text mt-4">
+              <p className="card-text mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
                 reiciendis dicta totam, blanditiis ullam omnis in praesentium
                 quas dolorem tempore?
               </p>
-              <h5 class="card-title mt-3">Rahsaan Satterfield DDS</h5>
+              <h5 className="card-title mt-3">Rahsaan Satterfield DDS</h5>
 
-              <p class="card-text">
-                <small class="text-muted">Dynamic Optimization Officer</small>
+              <p className="card-text">
+                <small className="text-muted">
+                  Dynamic Optimization Officer
+                </small>
               </p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
+          <div className="card">
+            <div className="card-body">
               <img
-                class="rounded-circle border border-info card-img-top"
+                className="rounded-circle border border-info card-img-top"
                 src="images/img_holder.png"
                 alt="clients"
               />
-              <p class="card-text mt-4">
+              <p className="card-text mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatem iure vero at illo maiores, tempore cupiditate officia
                 et nesciunt quisquam?
               </p>
-              <h5 class="card-title mt-3">Emmanuel Hintz I</h5>
+              <h5 className="card-title mt-3">Emmanuel Hintz I</h5>
 
-              <p class="card-text">
-                <small class="text-muted">Legacy Division Supervisor</small>
+              <p className="card-text">
+                <small className="text-muted">Legacy Division Supervisor</small>
               </p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
+          <div className="card">
+            <div className="card-body">
               <img
-                class="rounded-circle border border-info card-img-top"
+                className="rounded-circle border border-info card-img-top"
                 src="images/img_holder.png"
                 alt="clients"
               />
-              <p class="card-text mt-4">
+              <p className="card-text mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eius
                 eligendi reiciendis non ad consequuntur tempora repudiandae
                 placeat beatae, voluptatum, temporibus quae corporis magnam
                 deserunt!
               </p>
-              <h5 class="card-title mt-3">David Marks</h5>
+              <h5 className="card-title mt-3">David Marks</h5>
 
-              <p class="card-text">
-                <small class="text-muted">
+              <p className="card-text">
+                <small className="text-muted">
                   Dynamic Directives Orchestrator
                 </small>
               </p>
             </div>
           </div>
         </div>
-        <div class="text-center mt-md-3">
-          <button type="button" class="mx-auto btn btn-link text-success">
+        <div className="text-center mt-md-3">
+          <button type="button" className="mx-auto btn btn-link text-success">
             See more <FontAwesomeIcon icon={faCaretDown} />
           </button>
         </div>
