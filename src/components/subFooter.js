@@ -1,6 +1,7 @@
 // import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import contactImg from "../images/contact-img.jpg"
 
 const SubFooter = () => (
   <div>
@@ -12,7 +13,7 @@ const SubFooter = () => (
           <div class="col-sm">
             <img
               class="rounded-circle border border-info"
-              src="images/contact-img.jpg"
+              src={contactImg}
               alt="contact"
             />
           </div>

@@ -1,13 +1,15 @@
 // import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import logo from "../images/logo.png"
+import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
   <header>
     <div class="mx-lg-5 mx-xl-6">
       <nav className="navbar navbar-expand-md navbar-light py-2 mx-md-5 mx-lg-6">
         <a className="navbar-brand" href="index.html">
-          <img src="images/img_logo.png" alt="logo" className="logo" />
+          <img src={logo} alt="logo" className="logo" />
         </a>
         <button
           className="navbar-toggler"
@@ -27,29 +29,29 @@ const Header = ({ siteTitle }) => (
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item ml-4">
-              <a className="nav-link" href="index.html">
+              <Link to="/" className="nav-link active">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item ml-4">
-              <a className="nav-link" href="list.html">
+              <Link to="/" className="nav-link">
                 Buy
-              </a>
+              </Link>
             </li>
             <li className="nav-item ml-4">
-              <a className="nav-link" href="property.html">
+              <Link to="/" className="nav-link">
                 Rent
-              </a>
+              </Link>
             </li>
             <li className="nav-item ml-4">
-              <a className="nav-link active" href="about.html">
+              <Link to="/" className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item ml-4">
-              <a className="nav-link" href="contact.html">
+              <Link to="/" className="nav-link">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

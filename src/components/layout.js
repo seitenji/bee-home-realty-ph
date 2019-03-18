@@ -15,6 +15,7 @@ import Footer from "./footer"
 import "./layout.scss"
 // import "./style.css"
 import "bootstrap/dist/css/bootstrap.css"
+import Helmet from "react-helmet"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -32,6 +33,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Helmet
+          bodyAttributes={{
+            style: "background-color : #f3f3f3",
+          }}
+        />
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <SubFooter />
