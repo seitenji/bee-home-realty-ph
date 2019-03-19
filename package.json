@@ -23,6 +23,7 @@
     "gatsby-transformer-sharp": "^2.1.17",
     "i": "^0.3.6",
     "npm": "^6.9.0",
+    "preact-cli": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
