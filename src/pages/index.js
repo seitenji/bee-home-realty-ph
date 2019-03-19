@@ -489,6 +489,18 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+            $('.menu-toggle').click(function() {
+  
+              $('.site-nav').toggleClass('site-nav--open', 500);
+              $(this).toggleClass('open');
+  
+              })
+        `,
+      }}
+    />
     {/* End of Testimonial Section */}
   </Layout>
 )

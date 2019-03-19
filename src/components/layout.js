@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import Helmet from "react-helmet"
 
 import "./layout.scss"
 import "bootstrap/dist/css/bootstrap.css"
@@ -23,11 +22,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet
-          bodyAttributes={{
-            style: "background-color : #f3f3f3",
-          }}
-        />
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <SubFooter />
