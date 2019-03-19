@@ -5,25 +5,28 @@ import contactImg from "../images/contact-img.jpg"
 const SubFooter = () => (
   <div>
     <div id="sub-contact-section">
-      <div class="section">
-        <h1 class="text-center display-4 mb-4">Do you have questions?</h1>
+      <div className="section">
+        <h1 className="text-center display-4 mb-4">Do you have questions?</h1>
 
-        <div class="row contact-card">
-          <div class="col-sm">
+        <div className="row contact-card">
+          <div className="col-sm">
             <img
-              class="rounded-circle border border-info"
+              className="rounded-circle border border-info"
               src={contactImg}
               alt="contact"
             />
           </div>
-          <div class="col-sm contact-info">
+          <div className="col-sm contact-info">
             <h4>Shiela Enojo</h4>
-            <p class="font-weight-bold">Ask</p>
+            <p className="font-weight-bold">Ask</p>
             <p>
               +02 938-7012 <br />
               info@beehomerealtyph.com
             </p>
-            <button type="submit" class="btn btn-warning btn-block text-white">
+            <button
+              type="submit"
+              className="btn btn-warning btn-block text-white"
+            >
               Contact now
             </button>
           </div>

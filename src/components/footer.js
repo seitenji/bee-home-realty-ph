@@ -40,13 +40,13 @@ const Footer = () => (
             <p>All Rights Reserve</p>
           </div>
           <div className="col-sm">
-            <Link to="https://www.facebook.com/BeeHomeRealtyInc/">
+            <a href="https://www.facebook.com/BeeHomeRealtyInc/">
               <img
                 src="images/facebook.png"
                 alt="facebook"
                 className="mx-md-4 mr-2"
               />
-            </Link>
+            </a>
             <Link to="/">
               <img
                 src="images/instagram.png"

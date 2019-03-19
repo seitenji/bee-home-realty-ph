@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div class="mx-lg-5 mx-xl-6">
+    <div className="mx-lg-5 mx-xl-6">
       <nav className="navbar navbar-expand-md navbar-light py-2 mx-md-5 mx-lg-6">
         <a className="navbar-brand" href="index.html">
           <img src={logo} alt="logo" className="logo" />

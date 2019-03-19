@@ -312,7 +312,7 @@ const IndexPage = () => (
           <div
             className="modal fade"
             id="exampleModalScrollable"
-            tabindex="-1"
+            tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalScrollableTitle"
             aria-hidden="true"
