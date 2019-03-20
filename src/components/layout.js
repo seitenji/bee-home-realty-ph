@@ -23,7 +23,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
+        <div style={{ backgroundColor: `#f3f3f3` }}>
+          <main>{children}</main>
+        </div>
         <SubFooter />
         <Footer />
       </>

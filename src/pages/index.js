@@ -15,7 +15,7 @@ import logo from "../images/img-logo.png"
 
 import classNames from "classnames"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`Real Estate`, `Listing`, `Manila`]} />
 
@@ -82,122 +82,68 @@ const IndexPage = () => (
     <div id="featured-section">
       <div className="section">
         <h1 className="title text-center">Featured Properties</h1>
-
         <div className="card-deck">
-          <div className="card">
-            <Link to="/">
-              <img
-                src="https://source.unsplash.com/1600x900/?house, condo"
-                className="card-img-top"
-                alt="property"
-              />
-            </Link>
-            <div className="card-body">
-              <Link to="/" className="text-dark">
-                <h6 className="card-subtitle mb-2 text-muted">South Pauline</h6>
-                <h5 className="card-title">13042 Bogisich Common</h5>
+          {data.allMarkdownRemark.edges.map(post => (
+            <div key={post.node.id} className="card mb-4">
+              <Link to={post.node.frontmatter.path}>
+                <img
+                  src={post.node.frontmatter.image.childImageSharp.fluid.base64}
+                  width="100%"
+                  data-src={
+                    post.node.frontmatter.image.childImageSharp.fluid.src
+                  }
+                  data-srcset={
+                    post.node.frontmatter.image.childImageSharp.fluid.srcSet
+                  }
+                  data-sizes={
+                    post.node.frontmatter.image.childImageSharp.fluid.sizes
+                  }
+                  alt="property display"
+                />
               </Link>
-              <p className="card-text">Rooms: 2</p>
-              <p className="card-text">Square meter: 150 SqM</p>
+              <div className="card-body">
+                <Link to={post.node.frontmatter.path} className="text-dark">
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    {post.node.frontmatter.name}
+                  </h6>
+                  <h5 className="card-title">
+                    {post.node.frontmatter.location}
+                  </h5>
+                </Link>
+                <p className="card-text">Rooms: {post.node.frontmatter.room}</p>
+                <p className="card-text">
+                  Square meter: {post.node.frontmatter.size}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://source.unsplash.com/1600x900/?house, apartment"
-              className="card-img-top"
-              alt="property"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                This card has supporting text below as a natural lead-in to
-                additional content.
-              </p>
-              <p className="card-text">
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://source.unsplash.com/1600x900/?house, room"
-              className="card-img-top"
-              alt="property"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
-              </p>
-              <p className="card-text">
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
-
-        <div className="card-deck mt-sm-4">
-          <div className="card">
-            <img
-              src="https://source.unsplash.com/1600x900/?house, bedroom"
-              className="card-img-top"
-              alt="property"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p className="card-text">
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </p>
+        <div className="card-deck">
+          {data.allMarkdownRemark.edges.map(post => (
+            <div key={post.node.id} className="card">
+              <Link to={post.node.frontmatter.path}>
+                <img
+                  src="https://source.unsplash.com/1600x900/?house, condo"
+                  className="card-img-top"
+                  alt="property"
+                />
+              </Link>
+              <div className="card-body">
+                <Link to={post.node.frontmatter.path} className="text-dark">
+                  <h6 className="card-subtitle mb-2 text-muted">
+                    {post.node.frontmatter.name}
+                  </h6>
+                  <h5 className="card-title">
+                    {post.node.frontmatter.location}
+                  </h5>
+                </Link>
+                <p className="card-text">Rooms: {post.node.frontmatter.room}</p>
+                <p className="card-text">
+                  Square meter: {post.node.frontmatter.size}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://source.unsplash.com/1600x900/?house, hotel"
-              className="card-img-top"
-              alt="property"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                This card has supporting text below as a natural lead-in to
-                additional content.
-              </p>
-              <p className="card-text">
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
-          <div className="card">
-            <img
-              src="https://source.unsplash.com/1600x900/?house, home"
-              className="card-img-top"
-              alt="property"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
-              </p>
-              <p className="card-text">
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-md-3">
-          <button type="button" className="mx-auto btn btn-link text-success">
-            See more <FontAwesomeIcon icon={faCaretDown} />
-          </button>
+          ))}
         </div>
       </div>
     </div>
@@ -489,20 +435,40 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-            $('.menu-toggle').click(function() {
-  
-              $('.site-nav').toggleClass('site-nav--open', 500);
-              $(this).toggleClass('open');
-  
-              })
-        `,
-      }}
-    />
     {/* End of Testimonial Section */}
   </Layout>
 )
+
+export const pageQuery = graphql`
+  query FeatureIndexQuery {
+    allMarkdownRemark(
+      limit: 3
+      filter: { frontmatter: { feature: { eq: "true" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            name
+            location
+            room
+            size
+            image {
+              childImageSharp {
+                fluid {
+                  src
+                  srcSet
+                  base64
+                  sizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

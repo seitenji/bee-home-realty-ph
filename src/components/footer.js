@@ -1,6 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
 
+import imgFb from "../images/facebook.png"
+import imgIg from "../images/instagram.png"
+
 const Footer = () => (
   <footer>
     <div className="text-white">
@@ -27,10 +30,10 @@ const Footer = () => (
               <Link to="/">
                 <li className="mb-2">Rent</li>
               </Link>
-              <Link to="/">
+              <Link to="/about">
                 <li className="mb-2">About</li>
               </Link>
-              <Link to="/">
+              <Link to="/contact">
                 <li className="mb-2">Contact</li>
               </Link>
             </ul>
@@ -41,18 +44,10 @@ const Footer = () => (
           </div>
           <div className="col-sm">
             <a href="https://www.facebook.com/BeeHomeRealtyInc/">
-              <img
-                src="images/facebook.png"
-                alt="facebook"
-                className="mx-md-4 mr-2"
-              />
+              <img src={imgFb} alt="facebook" className="mx-md-4 mr-2" />
             </a>
             <Link to="/">
-              <img
-                src="images/instagram.png"
-                alt="instagram"
-                className="ml-2"
-              />
+              <img src={imgIg} alt="instagram" className="ml-2" />
             </Link>
           </div>
         </div>

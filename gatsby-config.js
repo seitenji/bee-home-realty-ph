@@ -10,12 +10,19 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 100,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,6 +33,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-jss`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-catch-links`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
