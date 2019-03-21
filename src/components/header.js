@@ -3,58 +3,26 @@ import React from "react"
 import logo from "../images/logo.png"
 import { Link } from "gatsby"
 
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
+
 const Header = ({ siteTitle }) => (
   <header>
     <div className="mx-lg-5 mx-xl-6">
-      <nav className="navbar navbar-expand-md navbar-light py-2 mx-md-5 mx-lg-6">
-        <a className="navbar-brand" href="index.html">
-          <img src={logo} alt="logo" className="logo" />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-
-        <div
-          className="collapse navbar-collapse text-center"
-          id="navbarSupportedContent"
-        >
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item ml-4">
-              <Link to="/" className="nav-link" activeClassName="active">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item ml-4">
-              <Link to="/" className="nav-link" activeClassName="active">
-                Buy
-              </Link>
-            </li>
-            <li className="nav-item ml-4">
-              <Link to="/" className="nav-link" activeClassName="active">
-                Rent
-              </Link>
-            </li>
-            <li className="nav-item ml-4">
-              <Link to="/about" className="nav-link" activeClassName="active">
-                About
-              </Link>
-            </li>
-            <li className="nav-item ml-4">
-              <Link to="/contact" className="nav-link" activeClassName="active">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar expand="md" className="py-2 mx-md-5 mx-lg-6">
+        <Navbar.Brand>
+          <Link to="/">
+            <img src={logo} alt="logo" className="logo" />
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </div>
   </header>
 )
