@@ -1,5 +1,7 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -86,19 +88,8 @@ const IndexPage = ({ data }) => (
           {data.allMarkdownRemark.edges.map(post => (
             <div key={post.node.id} className="card mb-4">
               <Link to={post.node.frontmatter.path}>
-                <img
-                  src={post.node.frontmatter.image.childImageSharp.fluid.base64}
-                  width="100%"
-                  data-src={
-                    post.node.frontmatter.image.childImageSharp.fluid.src
-                  }
-                  data-srcset={
-                    post.node.frontmatter.image.childImageSharp.fluid.srcSet
-                  }
-                  data-sizes={
-                    post.node.frontmatter.image.childImageSharp.fluid.sizes
-                  }
-                  alt="property display"
+                <Img
+                  fluid={post.node.frontmatter.image.childImageSharp.fluid}
                 />
               </Link>
               <div className="card-body">
@@ -456,11 +447,8 @@ export const pageQuery = graphql`
             size
             image {
               childImageSharp {
-                fluid {
-                  src
-                  srcSet
-                  base64
-                  sizes
+                fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
