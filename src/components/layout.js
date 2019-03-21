@@ -3,8 +3,11 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import "./layout.scss"
-import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
+import "jquery"
+import "popper.js"
+// import "bootstrap.min.js"
 
 import Header from "./header"
 import SubFooter from "./subFooter"
@@ -24,6 +27,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+
         <div style={{ backgroundColor: `#f3f3f3` }}>
           <main>{children}</main>
         </div>
