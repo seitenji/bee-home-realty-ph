@@ -18,7 +18,7 @@ const ContactPage = () => (
             <div className="card-text">
               <form>
                 <div className="form-group">
-                  <label for="formGroupExampleInput">Full Name</label>
+                  <label htmlFor="formGroupExampleInput">Full Name</label>
                   <input
                     type="text"
                     className="form-control"
@@ -27,7 +27,7 @@ const ContactPage = () => (
                   />
                 </div>
                 <div className="form-group">
-                  <label for="formGroupExampleInput2">Email</label>
+                  <label htmlFor="formGroupExampleInput2">Email</label>
                   <input
                     type="text"
                     className="form-control"
@@ -36,7 +36,7 @@ const ContactPage = () => (
                   />
                 </div>
                 <div className="form-group">
-                  <label for="formGroupExampleInput2">Contact Number</label>
+                  <label htmlFor="formGroupExampleInput2">Contact Number</label>
                   <input
                     type="text"
                     className="form-control"
@@ -45,7 +45,7 @@ const ContactPage = () => (
                   />
                 </div>
                 <div className="form-group">
-                  <label for="validationTextarea">Message</label>
+                  <label htmlFor="validationTextarea">Message</label>
                   <textarea
                     className="form-control"
                     id="validationTextarea"

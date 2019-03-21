@@ -29,27 +29,27 @@ const Header = ({ siteTitle }) => (
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item ml-4">
-              <Link to="/" className="nav-link active">
+              <Link to="/" className="nav-link" activeClassName="active">
                 Home
               </Link>
             </li>
             <li className="nav-item ml-4">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link" activeClassName="active">
                 Buy
               </Link>
             </li>
             <li className="nav-item ml-4">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link" activeClassName="active">
                 Rent
               </Link>
             </li>
             <li className="nav-item ml-4">
-              <Link to="/about" className="nav-link">
+              <Link to="/about" className="nav-link" activeClassName="active">
                 About
               </Link>
             </li>
             <li className="nav-item ml-4">
-              <Link to="/contact" className="nav-link">
+              <Link to="/contact" className="nav-link" activeClassName="active">
                 Contact
               </Link>
             </li>
