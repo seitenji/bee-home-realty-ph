@@ -24,12 +24,6 @@ const Footer = () => (
               <Link to="/">
                 <li className="mb-2">Home</li>
               </Link>
-              <Link to="/">
-                <li className="mb-2">Buy</li>
-              </Link>
-              <Link to="/">
-                <li className="mb-2">Rent</li>
-              </Link>
               <Link to="/about">
                 <li className="mb-2">About</li>
               </Link>

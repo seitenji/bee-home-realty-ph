@@ -18,8 +18,37 @@ const Header = ({ siteTitle }) => (
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item ml-4">
+                <Link to="/" className="nav-link" activeClassName="active">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item ml-4">
+                <Link to="/" className="nav-link" activeClassName="active">
+                  Buy
+                </Link>
+              </li>
+              <li className="nav-item ml-4">
+                <Link to="/" className="nav-link" activeClassName="active">
+                  Rent
+                </Link>
+              </li>
+              <li className="nav-item ml-4">
+                <Link to="/about" className="nav-link" activeClassName="active">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item ml-4">
+                <Link
+                  to="/contact"
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
