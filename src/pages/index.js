@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => (
     <div id="featured-section">
       <div className="section">
         <h1 className="title text-center">Featured Properties</h1>
-        <div className="card-deck">
+        {/* <div className="card-deck">
           {data.allMarkdownRemark.edges.map(post => (
             <div key={post.node.id} className="card mb-4">
               <Link to={post.node.frontmatter.path}>
@@ -108,30 +108,32 @@ const IndexPage = ({ data }) => (
               </div>
             </div>
           ))}
-        </div>
-        <div className="card-deck">
+        </div> */}
+        <div className="row">
           {data.allMarkdownRemark.edges.map(post => (
-            <div key={post.node.id} className="card">
-              <Link to={post.node.frontmatter.path}>
-                <img
-                  src="https://source.unsplash.com/1600x900/?house, condo"
-                  className="card-img-top"
-                  alt="property"
-                />
-              </Link>
-              <div className="card-body">
-                <Link to={post.node.frontmatter.path} className="text-dark">
-                  <h6 className="card-subtitle mb-2 text-muted">
-                    {post.node.frontmatter.name}
-                  </h6>
-                  <h5 className="card-title">
-                    {post.node.frontmatter.location}
-                  </h5>
+            <div key={post.node.id} className="col-md-4 col-xs-6">
+              <div className="card mb-4">
+                <Link to={post.node.frontmatter.path}>
+                  <Img
+                    fluid={post.node.frontmatter.image.childImageSharp.fluid}
+                  />
                 </Link>
-                <p className="card-text">Rooms: {post.node.frontmatter.room}</p>
-                <p className="card-text">
-                  Square meter: {post.node.frontmatter.size}
-                </p>
+                <div className="card-body">
+                  <Link to={post.node.frontmatter.path} className="text-dark">
+                    <h6 className="card-subtitle mb-2 text-muted">
+                      {post.node.frontmatter.name}
+                    </h6>
+                    <h5 className="card-title">
+                      {post.node.frontmatter.location}
+                    </h5>
+                  </Link>
+                  <p className="card-text">
+                    Rooms: {post.node.frontmatter.room}
+                  </p>
+                  <p className="card-text">
+                    Square meter: {post.node.frontmatter.size}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -433,7 +435,7 @@ const IndexPage = ({ data }) => (
 export const pageQuery = graphql`
   query FeatureIndexQuery {
     allMarkdownRemark(
-      limit: 3
+      limit: 6
       filter: { frontmatter: { feature: { eq: "true" } } }
     ) {
       edges {
@@ -447,7 +449,7 @@ export const pageQuery = graphql`
             size
             image {
               childImageSharp {
-                fluid(quality: 100) {
+                fluid(quality: 90) {
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }

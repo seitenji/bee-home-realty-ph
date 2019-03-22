@@ -81,6 +81,10 @@ a :hover {
 }
 
 // Header
+.nav-cus {
+  text-align: center;
+}
+
 .logo {
   width: 9rem;
 }
@@ -191,6 +195,11 @@ img:hover {
   a:hover {
     text-decoration: none;
     color: color(secondary-dark);
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
