@@ -10,7 +10,7 @@ const ListPage = ({ data }) => (
   <Layout>
     <SEO title="Properties" keywords={[`Real Estate`, `Listing`, `Manila`]} />
     <div id="list-section">
-      <div class="section">
+      <div className="section">
         <h1 className="title text-center">Buy</h1>
 
         {/* <form className="mt-5">
