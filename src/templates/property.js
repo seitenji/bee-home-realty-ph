@@ -1,11 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import Carousel from "nuka-carousel"
+
 import Layout from "../components/layout"
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+      {/* Display Property Section */}
+      <div id="display-section">
+        <div className="display-container">
+          <Carousel>
+            {post.frontmatter.slide.map(slide => (
+              <Img key={slide.id} fluid={slide.childImageSharp.fluid} />
+            ))}
+          </Carousel>
+        </div>
+      </div>
+
+      {/* Property Detail Section */}
       <div id="property-detail-section">
         <div className="section">
           <div className="property-address mt-md-5 mt-4">
@@ -75,11 +90,27 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      id
       frontmatter {
         name
         room
         size
         price
+        image {
+          childImageSharp {
+            fluid(quality: 70) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+        slide {
+          id
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 700, maxHeight: 420) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
       }
     }
   }
