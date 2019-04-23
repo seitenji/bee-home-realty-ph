@@ -1,4 +1,4 @@
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 import contactImg from "../images/contact-img.jpg"
 
@@ -23,12 +23,14 @@ const SubFooter = () => (
               +02 938-7012 <br />
               info@beehomerealtyph.com
             </p>
-            <button
-              type="submit"
-              className="btn btn-warning btn-block text-white"
-            >
-              Contact now
-            </button>
+            <Link to="/contact">
+              <button
+                type="submit"
+                className="btn btn-warning btn-block text-white"
+              >
+                Contact now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Carousel from "nuka-carousel"
 
 import Layout from "../components/layout"
+import CheckAlso from "../components/checkAlso"
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -24,8 +25,9 @@ export default ({ data }) => {
       <div id="property-detail-section">
         <div className="section">
           <div className="property-address mt-md-5 mt-4">
-            <h4>{post.frontmatter.name}</h4>
+            <h6 className="mb-3 text-secondary">{post.frontmatter.type}</h6>
             <h2>{post.frontmatter.location}</h2>
+            <h4>{post.frontmatter.name}</h4>
           </div>
 
           <div className="property-detail mt-md-5 mt-4">
@@ -34,7 +36,7 @@ export default ({ data }) => {
                 <p className="font-weight-bold">Rooms:</p>
               </div>
               <div className="col">
-                <p className="font-weight-bold">{post.frontmatter.room}</p>
+                <p>{post.frontmatter.room}</p>
               </div>
               <div className="w-100" />
               <div className="col">
@@ -56,11 +58,11 @@ export default ({ data }) => {
           <div className="property-summary mt-md-5 mt-4">
             <h3>Summary</h3>
             <ul className="list-group list-group-flush">
-              <li className="list-group-item">Cras justo odio</li>
-              <li className="list-group-item">Dapibus ac facilisis in</li>
-              <li className="list-group-item">Morbi leo risus</li>
-              <li className="list-group-item">Porta ac consectetur ac</li>
-              <li className="list-group-item">Vestibulum at eros</li>
+              {post.frontmatter.summary.map(summary => (
+                <li key={summary} className="list-group-item">
+                  {summary}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -77,7 +79,13 @@ export default ({ data }) => {
 
           <div className="property-summary mt-md-5 mt-4">
             <h3>Map</h3>
-            {/* <div id="googleMap" style="width:100%;height:400px;" /> */}
+            <div id="map" />
+          </div>
+
+          {/* Check also */}
+          <div class="check-also mt-md-5 mt-4">
+            <h5>Check also</h5>
+            <CheckAlso />
           </div>
         </div>
       </div>
@@ -93,6 +101,7 @@ export const query = graphql`
       id
       frontmatter {
         name
+        location
         room
         size
         price
@@ -111,6 +120,8 @@ export const query = graphql`
             }
           }
         }
+        summary
+        type
       }
     }
   }

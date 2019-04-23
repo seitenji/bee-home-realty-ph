@@ -25,12 +25,12 @@ const Header = ({ siteTitle }) => (
                 </Link>
               </li>
               <li className="nav-item ml-4">
-                <Link to="/" className="nav-link" activeClassName="active">
+                <Link to="/sale" className="nav-link" activeClassName="active">
                   Buy
                 </Link>
               </li>
               <li className="nav-item ml-4">
-                <Link to="/" className="nav-link" activeClassName="active">
+                <Link to="/rent" className="nav-link" activeClassName="active">
                   Rent
                 </Link>
               </li>

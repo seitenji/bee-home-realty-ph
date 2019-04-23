@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const ListPage = ({ data }) => (
+const SalePage = ({ data }) => (
   <Layout>
     <SEO title="Properties" keywords={[`Real Estate`, `Listing`, `Manila`]} />
     <div id="list-section">
@@ -111,14 +111,11 @@ const ListPage = ({ data }) => (
     </div>
   </Layout>
 )
-export default ListPage
+export default SalePage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(
-      limit: 6
-      filter: { frontmatter: { feature: { eq: "true" } } }
-    ) {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "For sale" } } }) {
       edges {
         node {
           id

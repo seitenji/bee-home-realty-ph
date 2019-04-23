@@ -10,12 +10,12 @@ const Footer = () => (
       <div className="section">
         <div className="row mx-auto">
           <div className="col-sm">
-            <Link to="/">
+            <Link to="/sale">
               <h1 className="display-4">Buy</h1>
             </Link>
           </div>
           <div className="col-sm">
-            <Link to="/">
+            <Link to="/rent">
               <h1 className="display-4">Rent</h1>
             </Link>
           </div>
