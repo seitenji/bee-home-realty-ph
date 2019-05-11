@@ -16,7 +16,11 @@ export default ({ data }) => {
         <div className="display-container">
           <Carousel>
             {post.frontmatter.slide.map(slide => (
-              <Img key={slide.id} fluid={slide.childImageSharp.fluid} />
+              <Img
+                key={slide.id}
+                fluid={slide.childImageSharp.fluid}
+                alt="property-image"
+              />
             ))}
           </Carousel>
         </div>
