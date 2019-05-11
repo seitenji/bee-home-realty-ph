@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import imgFb from "../images/facebook.png"
-import imgIg from "../images/instagram.png"
+// import imgIg from "../images/instagram.png"
 
 const Footer = () => (
   <footer>
@@ -37,12 +37,16 @@ const Footer = () => (
             <p>All Rights Reserve</p>
           </div>
           <div className="col-sm">
-            <a href="https://www.facebook.com/BeeHomeRealtyInc/">
+            <a
+              href="https://www.facebook.com/BeeHomeRealtyInc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={imgFb} alt="facebook" className="mx-md-4 mr-2" />
             </a>
-            <Link to="/">
+            {/* <Link to="/">
               <img src={imgIg} alt="instagram" className="ml-2" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -49,6 +49,7 @@ const CheckAlso = ({ children }) => (
                         fluid={
                           post.node.frontmatter.image.childImageSharp.fluid
                         }
+                        className="image"
                       />
                     </Link>
                     <div className="card-body">

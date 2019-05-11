@@ -8,6 +8,7 @@ import imgDoris from "../images/doris.jpg"
 import imgShiela from "../images/shiela.jpg"
 import imgMarita from "../images/marita.jpg"
 import imgAbout from "../images/img-about.jpg"
+import logo from "../images/img-logo.png"
 
 const AboutPage = () => (
   <Layout>
@@ -22,7 +23,7 @@ const AboutPage = () => (
           <div className="about-a-text">
             <div className="card">
               <div className="card-body pl">
-                <h1>10 Years in Service.</h1>
+                <h1>Quality.</h1>
                 <p className="lead">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Repudiandae magni nam illo.
@@ -66,6 +67,48 @@ const AboutPage = () => (
       </div>
     </div>
 
+    <div id="about-section">
+      <div className="section">
+        <h1 className="title text-center">Why work with us?</h1>
+
+        <div className="card-about">
+          <div className="card-about-logo">
+            <img src={logo} alt="logo" className="img-thumbnail" />
+          </div>
+
+          <div className="card-about-text">
+            <p className="lead p-title">INTEGRITY</p>
+            <p>
+              High standards of honesty and strong
+              <br />
+              moral principles.
+            </p>
+            <p className="lead p-title">LOYALTY</p>
+            <p>
+              Being faithful and trustworthy to be able to keep long time
+              relationships.
+            </p>
+            <p className="lead p-title">COMMITMENT TO EXCELLENCE</p>
+            <p>
+              Providing our customers with quality services to address their
+              needs.
+            </p>
+            <p className="lead p-title">TRANSPARENCY</p>
+            <p>Being accountable and open in all our business practices.</p>
+            <p className="lead p-title">PASSION</p>
+            <p>
+              Working beyond what is needed and with dedication at all time.
+            </p>
+            <p className="lead p-title">INNOVATION</p>
+            <p>
+              Thinking outside the box, being creative and seizing oppurtunities
+              to grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/* End of About Section */}
     {/* Team Section */}
     <div id="team-section">
       <div className="section">
@@ -79,9 +122,10 @@ const AboutPage = () => (
         <div className="card-group text-center">
           <div className="card">
             <img src={imgDoris} className="card-img-top" alt="agent" />
+            <div className="card-header">Marketing President</div>
             <div className="card-body">
               <h5 className="card-title">Ma. Drois L. Tabios</h5>
-              <p className="card-text">Marketing President</p>
+              <p className="card-text">*Achievements and introduction here*</p>
             </div>
           </div>
           <div className="card">
@@ -90,9 +134,10 @@ const AboutPage = () => (
               className="card-img-top"
               alt="agent"
             />
+            <div className="card-header">VP Marketing - Local</div>
             <div className="card-body">
               <h5 className="card-title">Melissa L. Madronio</h5>
-              <p className="card-text">VP Marketing - Local</p>
+              <p className="card-text">*Achievements and introduction here*</p>
             </div>
           </div>
         </div>
@@ -100,23 +145,27 @@ const AboutPage = () => (
         <div className="card-group text-center">
           <div className="card">
             <img src={imgBenilda} className="card-img-top" alt="agent" />
+            <div className="card-header">VP Marketing - International</div>
             <div className="card-body">
               <h5 className="card-title">Benilda D. Bautista</h5>
-              <p className="card-text">VP Marketing - International</p>
+              <p className="card-text">*Achievements and introduction here*</p>
             </div>
           </div>
           <div className="card">
             <img src={imgMarita} className="card-img-top" alt="agent" />
+            <div className="card-header">Treasurer</div>
+
             <div className="card-body">
               <h5 className="card-title">Marita R. Osita</h5>
-              <p className="card-text">Treasurer</p>
+              <p className="card-text">*Achievements and introduction here*</p>
             </div>
           </div>
           <div className="card">
             <img src={imgShiela} className="card-img-top" alt="agents" />
+            <div className="card-header">Secretary</div>
             <div className="card-body">
               <h5 className="card-title">Shiela Marie S. Enojo</h5>
-              <p className="card-text">Secretary</p>
+              <p className="card-text">*Achievements and introduction here*</p>
             </div>
           </div>
         </div>
@@ -196,11 +245,11 @@ const AboutPage = () => (
             </div>
           </div>
         </div>
-        <div className="text-center mt-md-3">
+        {/* <div className="text-center mt-md-3">
           <button type="button" className="mx-auto btn btn-link">
             See more <i className="fas fa-caret-down" />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   </Layout>

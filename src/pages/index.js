@@ -90,6 +90,7 @@ const IndexPage = ({ data }) => (
                 <Link to={post.node.fields.slug}>
                   <Img
                     fluid={post.node.frontmatter.image.childImageSharp.fluid}
+                    className="image"
                   />
                 </Link>
                 <div className="card-body">
