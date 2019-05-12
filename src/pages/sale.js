@@ -5,6 +5,13 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import InputGroup from "react-bootstrap/InputGroup"
+import DropdownButton from "react-bootstrap/DropdownButton"
+import FormControl from "react-bootstrap/FormControl"
+import Button from "react-bootstrap/Button"
+
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SalePage = ({ data }) => (
   <Layout>
@@ -13,70 +20,43 @@ const SalePage = ({ data }) => (
       <div className="section">
         <h1 className="title text-center">Buy</h1>
 
-        {/* <form className="mt-5">
-      <div className="form-row justify-content-center">
-        <div className="col-md-5   col-sm-12 mb-3">
-          <input
-            type="text"
-            className="form-control"
+        <InputGroup className="mb-4">
+          <FormControl
             placeholder="Enter a location"
+            aria-label="Enter a location"
+            aria-describedby="basic-addon2"
           />
-        </div>
-        <div className="col-md-auto mb-3">
-          <button
-            type="button"
-            className="btn btn-outline-success btn-block"
-            id="btn-price-drop"
+
+          <DropdownButton
+            as={InputGroup.Append}
+            variant="success"
+            title="Price"
+            id="input-group-dropdown-2"
           >
-            Price <i className="fas fa-caret-down" />
-          </button>
-          <div className="form-popup" id="price-drop">
-            <div className="row">
-              <div className="col">
-                <input type="text" className="form-control" />
-              </div>
-              <p className="mt-1">to</p>
-              <div className="col">
-                <input type="text" className="form-control" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-auto mb-3">
-          <button
-            type="button"
-            className="btn btn-outline-success btn-block"
-            id="btn-room-drop"
+            <FormControl />
+          </DropdownButton>
+          <DropdownButton
+            as={InputGroup.Append}
+            variant="success"
+            title="Number of room"
+            id="input-group-dropdown-2"
           >
-            Number of room <i className="fas fa-caret-down" />
-          </button>
-          <div className="form-popup" id="room-drop">
-            <div>
-              <input type="text" className="form-control" />
-            </div>
-          </div>
-        </div>
-        <div className="col-md-auto mb-3">
-          <button
-            type="button"
-            className="btn btn-outline-success btn-block"
-            id="btn-size-drop"
+            <FormControl />
+          </DropdownButton>
+          <DropdownButton
+            as={InputGroup.Append}
+            variant="success"
+            title="Square meterage"
+            id="input-group-dropdown-2"
           >
-            Square meterage <i className="fas fa-caret-down" />
-          </button>
-          <div className="form-popup" id="size-drop">
-            <div>
-              <input type="text" className="form-control" />
-            </div>
-          </div>
-        </div>
-        <div className="col-md-1">
-          <button type="submit" className="btn btn-warning btn-block mb">
-            <i className="fas fa-search" />
-          </button>
-        </div>
-      </div>
-    </form> */}
+            <FormControl />
+          </DropdownButton>
+          <InputGroup.Append>
+            <Button variant="warning">
+              <FontAwesomeIcon icon={faSearch} />
+            </Button>
+          </InputGroup.Append>
+        </InputGroup>
 
         <div className="card-deck">
           {data.allMarkdownRemark.edges.map(post => (
@@ -85,6 +65,7 @@ const SalePage = ({ data }) => (
                 <Link to={post.node.fields.slug}>
                   <Img
                     fluid={post.node.frontmatter.image.childImageSharp.fluid}
+                    className="image"
                   />
                 </Link>
                 <div className="card-body">
